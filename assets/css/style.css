@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heading {
+    text-align: center;
+}
+
+#instructions {
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+    width: 475px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#gameplay {
+    /*border: 1px solid black;*/
+    height: 275px;
+    width: 550px;
+    margin-top: 30px;
+}
+
+#history-container {
+    float: left;
+    width: 100px;
+    height: 275px;
+    /*border: 1px solid black;*/
+}
+
+#history {
+    /*border: 1px solid red;*/
+    width: 100px;
+    height: 163px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#current-game {
+    /*border: 1px solid black;*/
+    float: left;
+    width: 450px;
+    height: 275px;
+    text-align: center;
+}
+
+#record {
+    /*border: 1px solid black;*/
+    width: 75px;
+}
+
+span {
+    float: right;
+}
+
+img {
+    border: 1px black solid;
+}
