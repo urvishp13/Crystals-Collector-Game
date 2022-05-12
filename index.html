@@ -4,30 +4,36 @@
 
 </head>
 <body>
-    <h1 id="heading">Crystals Collector</h1>
-    <div id="instructions">
-        <p>You will be given a random number at the start of the game</p>
-        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
-            total score.
-        </p>
-        <p>You win the game by matching your total score to the random number. You lose the game if your total
-            score goes above the random number.
-        </p>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time when the game restarts, the values of each crystal will change.</p>
-    </div>
-    <div id="gameplay">
-        <div id="target-number"></div>
-        <div id="after-one-game-status"></div>
-        <div id="crystals-container">
-            <img src="assets/images/crystal1.jpg" alt="crystal-1-image">
-            <img src="assets/images/crystal2.jpg" alt="crystal-2-image">
-            <img src="assets/images/crystal3.jpg" alt="crystal-3-image">
-            <img src="assets/images/crystal4.jpg" alt="crystal-4-image">
+    <div id="game-cnntent">
+        <h1 id="heading">Crystals Collector</h1>
+        <div id="instructions">
+            <p>You will be given a random number at the start of the game</p>
+            <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
+                total score.
+            </p>
+            <p>You win the game by matching your total score to the random number. You lose the game if your total
+                score goes above the random number.
+            </p>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+            <p>Each time when the game restarts, the values of each crystal will change.</p>
         </div>
-        <div id="player-related-info">
-            <p>Your total score:</p>
-            <p id="score"></p>
+        <div id="gameplay">
+            <div id="target-number"></div>
+            <div id="history">
+                <p id="prev-game-result"></p>
+                <p>Wins: <span id="wins">0</span></p>
+                <p>Losses: <span id="wins">0</span></p>
+            </div>
+            <div id="crystals-container">
+                <img id="crystal1" src="assets/images/crystal1.jpg" alt="crystal-1-image">
+                <img id="crystal2" src="assets/images/crystal2.jpg" alt="crystal-2-image">
+                <img id="crystal3" src="assets/images/crystal3.jpg" alt="crystal-3-image">
+                <img id="crystal4" src="assets/images/crystal4.jpg" alt="crystal-4-image">
+            </div>
+            <div id="player-related-info">
+                <p>Your total score:</p>
+                <p id="score"></p>
+            </div>
         </div>
     </div>
 </body>
