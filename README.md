@@ -1,1 +1,1 @@
-# Crystals-Collector-Game
+# Crystals Collector Game
