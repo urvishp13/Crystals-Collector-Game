@@ -19,11 +19,11 @@ function startNewGame() {
     // Reset Player's total score to 0
     totalScore = 0;
     $('#score').html(`${totalScore}`);
-    // Clear 'prev-game-result'
-    $('#prev-game-result').html('');
 }
 // When crystal clicked
-function whenCrystalClicked(crystal, crystalValue);
+function whenCrystalClicked(crystalValue) {
+    // Clear prev game resul
+    $('#prev-game-result').html('');
     // Increment Player's total score by crystal's value
     totalScore += crystalValue;
     // Update total score in DOM
@@ -32,9 +32,9 @@ function whenCrystalClicked(crystal, crystalValue);
     if (totalScore === targetNumber) {
         /* The Player wins */
         // Update wins by 1
-        $('#wins').html++;
+        $('#wins').html(`${parseInt($('#wins').html()) + 1}`);
         // Write in 'prev-game-result' that Player won
-        $('prev-game-result').html("You Won!");
+        $('#prev-game-result').html("You Won!");
         // startNewGame()
         startNewGame();
     }
@@ -42,30 +42,31 @@ function whenCrystalClicked(crystal, crystalValue);
     else if (totalScore > targetNumber) {
         /* The player looses */
         // Update losses by 1
-        $('#losses').html++;
+        $('#losses').html(`${parseInt($('#losses').html()) + 1}`);
         // Write in 'prev-game-result' that Player lost
-        $('prev-game-result').html("You Lost");
+        $('#prev-game-result').html("You Lost");
         // startNewGame()
         startNewGame();
     }
+}
 
 // Start new game
 startNewGame();
 
 /* Add event listeners on all crystals */
-// When clicked, call whenCrystalClicked() passing in crystal number and value
+// When clicked, call whenCrystalClicked() passing in crystal value
 $('#crystal1').on('click', () => {
-    whenCrystalClicked($('#crystal1'), crystal1value);
+    whenCrystalClicked(crystal1value);
 });
 
 $('#crystal2').on('click', () => {
-    whenCrystalClicked($('#crystal2'), crystal2value);
+    whenCrystalClicked(crystal2value);
 });
 
 $('#crystal3').on('click', () => {
-    whenCrystalClicked($('#crystal3'), crystal3value);
+    whenCrystalClicked(crystal3value);
 });
 
 $('#crystal4').on('click', () => {
-    whenCrystalClicked($('#crystal4'), crystal4value);
+    whenCrystalClicked(crystal4value);
 });
