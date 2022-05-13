@@ -76,4 +76,5 @@ span {
 
 img {
     border: 1px black solid;
+    cursor: pointer;
 }
